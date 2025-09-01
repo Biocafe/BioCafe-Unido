@@ -1,0 +1,266 @@
+/* Contenedor principal */
+.homeContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FAF7F0;
+}
+
+/* Contenedor del carrusel */
+.carouselContainer {
+  width: 90%;
+  max-width: 1500px;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carouselItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.carouselItem img {
+  width: 100%;
+  max-height: 400px !important;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carouselItem p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #6F4E37;
+  font-weight: bold;
+}
+
+/* Secciones de contenido */
+.contentSection {
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 40px 0;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contentSection h2 {
+  color: #6F4E37;
+  font-size: 22px;
+}
+
+.contentSection p {
+  color: #A67B5B;
+  font-size: 18px;
+}
+
+/* Sección "¿Qué es el café?" */
+.section {
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sectionImage {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.sectionText {
+  width: 55%;
+  text-align: justify;
+  color: #6F4E37;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .section {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .sectionImage, .sectionText {
+      width: 100%;
+  }
+}
+
+/* Título llamativo para los procesos del café */
+.processTitle {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px;
+  background: #6F4E37;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de los procesos */
+.processContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 40px;
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tarjetas de procesos */
+.processCard {
+  background: #A67B5B;
+  color: white;
+  width: 100%;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  max-width: 320px;
+}
+
+.processCard:hover {
+  transform: scale(1.05);
+}
+
+.processCard img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.processCard h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: white;
+}
+
+.processCard p {
+  font-size: 16px;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+/* Asegurar que los dos de la segunda fila estén centrados */
+@media (min-width: 1025px) {
+  .processContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .processCard:nth-child(4),
+  .processCard:nth-child(5) {
+    grid-column: span 1;
+    justify-self: center;
+  }
+}
+
+/* Ajuste en pantallas medianas */
+@media (max-width: 1024px) {
+  .processContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+/* En pantallas pequeñas, mostrar en una sola columna */
+@media (max-width: 768px) {
+  .processContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Sección de homenaje a los caficultores */
+.caficultoresSection {
+  width: 90%;
+  max-width: 1200px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.messageTitle {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: #6F4E37;
+  margin-bottom: 15px;
+  border-radius: 12px;
+}
+
+.messageText {
+  font-size: 18px;
+  color: #A67B5B;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Carrusel de caficultores */
+.caficultoresCarousel {
+  width: 90%;
+  max-width: 1200px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.messageTitle {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.caficultorItem img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+.footer {
+  background: #6F4E37;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.footer p {
+  color: white;
+  margin: 0;
+}

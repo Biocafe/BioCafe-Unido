@@ -1,0 +1,120 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #FAF7F0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+  font-size: 28px;
+  color: #6F4E37;
+  margin-bottom: 20px;
+}
+
+/* Botón de descarga */
+.downloadBtn {
+  background-color: #6F4E37;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.downloadBtn:hover {
+  background-color: #A67B5B;
+}
+
+/* Input de archivo (oculto) */
+.fileInput {
+  display: none;
+}
+
+/* Label estilizado para file input */
+.fileInputLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ECB176;
+  color: #3e2b1c;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.fileInputLabel:hover {
+  background-color: #FED8B1;
+}
+
+/* Nombre del archivo cargado */
+.fileName {
+  font-size: 15px;
+  color: #6F4E37;
+  margin-bottom: 10px;
+}
+
+/* Mensaje de alerta/instrucción */
+.alerta {
+  font-size: 16px;
+  font-weight: bold;
+  color: #6F4E37;
+  background-color: #fdf0e7;
+  border-left: 5px solid #ECB176;
+  padding: 12px 18px;
+  border-radius: 8px;
+  margin: 10px 0 20px;
+  text-align: left;
+}
+
+/* Texto de instrucciones adicionales */
+.instruction {
+  font-size: 16px;
+  color: #3e2b1c;
+  margin: 16px 0 12px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Botón de mostrar resultado */
+.resultadoBtn {
+  background-color: #A67B5B;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resultadoBtn:hover {
+  background-color: #ECB176;
+}
+
+.resultadoBtn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

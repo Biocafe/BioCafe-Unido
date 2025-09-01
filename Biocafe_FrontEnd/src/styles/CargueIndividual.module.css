@@ -1,0 +1,115 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #FAF7F0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 28px;
+  color: #6F4E37;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  margin-right: 8px;
+  color: #ECB176;
+  animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+  0%   { transform: scale(0.7); }
+  100% { transform: scale(1); }
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #ECB176;
+  outline: none;
+}
+
+.fieldset {
+  position: relative;              
+  border: 2px solid #6F4E37;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  padding: 24px;                   
+  padding-top: 32px;               
+  background-color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;          
+}
+
+.fieldset legend {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: 0 auto;
+  padding: 0 12px;
+  background-color: #FAF7F0;
+  color: #6F4E37;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.fieldset legend svg {
+  margin-right: 6px;
+  color: #ECB176;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 8px 0;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.addBtn {
+  background-color: #ECB176;
+  color: #3e2b1c;
+}
+
+.addBtn:hover {
+  background-color: #FED8B1;
+  transform: translateY(-2px);
+}
+
+.resultadoBtn {
+  background-color: #6F4E37;
+  color: white;
+}
+
+.resultadoBtn:hover {
+  background-color: #A67B5B;
+  transform: translateY(-2px);
+}

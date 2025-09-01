@@ -1,0 +1,239 @@
+.resultadosContainer {
+  background-color: #FAF7F0;
+  padding: 20px;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.resultadosContenido {
+  margin-top: 30px;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.resultadosContenido h2 {
+  font-size: 28px;
+  color: #6F4E37;
+  margin-bottom: 24px;
+  font-weight: bold;
+  border-bottom: 3px solid #ECB176;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.resultadosContenido h3 {
+  color: #6F4E37;
+  font-size: 20px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.resultadosContenido p {
+  font-size: 16px;
+  margin: 12px 0;
+  background: #fff8ef;
+  padding: 10px 16px;
+  border-left: 5px solid #ECB176;
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* Tabla */
+.tablaResultados {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 20px auto 30px;
+  font-size: 14px;
+}
+
+.tablaResultados th,
+.tablaResultados td {
+  padding: 12px;
+  text-align: center;
+}
+
+.tablaResultados th {
+  background-color: #ECB176;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  border-bottom: 2px solid #fff;
+}
+
+.tablaResultados td {
+  background-color: #fff;
+}
+
+/* Secciones de pruebas estadísticas */
+.pruebasEstadisticas {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #ECB176;
+}
+
+.pruebasEstadisticas h3 {
+  color: #6F4E37;
+  font-size: 18px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.pruebasEstadisticas h3:first-child {
+  margin-top: 0;
+}
+
+.duncanInfo {
+  background: #e8f4f8;
+  border: 1px solid #b8daff;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 15px 0;
+  font-style: italic;
+  color: #0c5460;
+}
+
+/* Estilos para Shapiro-Wilk mejorado */
+.pruebaDetalle {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px 0;
+  text-align: left;
+}
+
+.pruebaDetalle h4 {
+  color: #6F4E37;
+  font-size: 18px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #ECB176;
+  padding-bottom: 8px;
+}
+
+.shapiroResultados {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.estadisticos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.estadisticos span {
+  font-size: 14px;
+  color: #495057;
+}
+
+.interpretacion {
+  background: #e7f3ff;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 4px solid #0066cc;
+  font-size: 14px;
+  color: #004499;
+}
+
+.resultado {
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.exito {
+  color: #155724;
+  background: #d4edda;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #c3e6cb;
+}
+
+.advertencia {
+  color: #721c24;
+  background: #f8d7da;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #f5c6cb;
+}
+
+.shapiroError {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mensaje {
+  background: #fff3cd;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ffeaa7;
+  color: #856404;
+}
+
+.conclusion {
+  background: #f8d7da;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+/* Centrado Plotly */
+.resultadosContenido .js-plotly-plot {
+  margin: 0 auto !important;
+}
+
+/* Botones */
+.botonesExportacion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.botonesExportacion button {
+  background-color: #6F4E37;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.botonesExportacion button:hover {
+  background-color: #A67B5B;
+  transform: scale(1.05);
+}
+
+/* Iconos en botones */
+.botonesExportacion button svg {
+  font-size: 1.1em;
+  color: #FFF;
+}

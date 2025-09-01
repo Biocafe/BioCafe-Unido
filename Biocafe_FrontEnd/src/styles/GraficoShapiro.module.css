@@ -1,0 +1,136 @@
+/* Contenedor principal de gráficos */
+.graficosContainer {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #ECB176;
+}
+
+.graficosContainer h3 {
+  color: #6F4E37;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #ECB176;
+  padding-bottom: 10px;
+}
+
+.graficosContainer h4 {
+  color: #6F4E37;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.graficosContainer h5 {
+  color: #6F4E37;
+  font-size: 16px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Mensajes de error */
+.errorMessage {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.errorMessage p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Grid de gráficos */
+.graficosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin: 20px 0;
+}
+
+/* Contenedores de gráficos individuales */
+.graficoIndividual {
+  background: #ffffff;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Interpretaciones */
+.interpretacion {
+  background: #e7f3ff;
+  border: 1px solid #b8daff;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #004499;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.interpretacion strong {
+  color: #002266;
+}
+
+/* Estados de carga */
+.cargando {
+  text-align: center;
+  padding: 40px;
+  color: #6F4E37;
+  font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .graficosContainer {
+    padding: 15px;
+    margin: 15px 0;
+  }
+  
+  .graficoIndividual {
+    padding: 15px;
+  }
+  
+  .errorMessage {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+
+/* Informe detallado */
+.informeDetallado {
+  margin-top: 30px;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 2px solid #ECB176;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.graficoIndividual {
+  animation: fadeIn 0.5s ease-out;
+}

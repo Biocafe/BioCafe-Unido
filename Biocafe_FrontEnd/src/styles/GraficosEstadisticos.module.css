@@ -1,0 +1,192 @@
+/* Contenedor principal de gráficos */
+.graficosContainer {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #ECB176;
+}
+
+.graficosContainer h3 {
+  color: #6F4E37;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #ECB176;
+  padding-bottom: 10px;
+}
+
+/* Secciones de gráficos */
+.seccionGraficos {
+  margin: 30px 0;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tituloSeccion {
+  color: #6F4E37;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #ECB176, #D4A574);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Grid de gráficos */
+.graficosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Contenedor individual de gráfico */
+.graficoContainer {
+  background: #ffffff;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.graficoContainer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.graficoContainer h4 {
+  color: #6F4E37;
+  font-size: 16px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ECB176;
+}
+
+/* Interpretaciones */
+.interpretacion {
+  background: #e7f3ff;
+  border: 1px solid #b8daff;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #004499;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.interpretacion strong {
+  color: #002266;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .graficosGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .graficosContainer {
+    padding: 15px;
+    margin: 15px 0;
+  }
+  
+  .seccionGraficos {
+    padding: 15px;
+  }
+  
+  .graficoContainer {
+    padding: 15px;
+  }
+  
+  .graficosGrid {
+    gap: 15px;
+  }
+  
+  .tituloSeccion {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
+
+/* Estilos para estados de carga */
+.cargando {
+  text-align: center;
+  padding: 40px;
+  color: #6F4E37;
+  font-style: italic;
+}
+
+.error {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.graficoContainer {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Estilos para tooltips de gráficos */
+.tooltip {
+  background: rgba(111, 78, 55, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Indicadores de significancia */
+.significativo {
+  border-left: 4px solid #dc3545;
+}
+
+.noSignificativo {
+  border-left: 4px solid #28a745;
+}
+
+/* Leyendas de gráficos */
+.leyenda {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #495057;
+}
+
+.leyenda ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.leyenda li {
+  margin: 5px 0;
+}
