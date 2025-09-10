@@ -84,6 +84,35 @@ class AuthService {
   getCurrentUser() {
     return localStorage.getItem('usuario');
   }
+
+  async getUserInfo() {
+    try {
+      const token = this.getToken();
+      if (!token) {
+        console.log('No hay token disponible');
+        return null;
+      }
+
+      const response = await api.get('/usuarios/me', {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+
+      if (response.data) {
+        return response.data;
+      }
+      return null;
+    } catch (error) {
+      console.error('Error al obtener información del usuario:', error);
+      // Si hay error de autenticación, limpiar el token
+      if (error.response && error.response.status === 401) {
+        this.logout();
+      }
+      throw error;
+    }
+  }
 }
 
-export default new AuthService();
+const authService = new AuthService();
+export default authService;

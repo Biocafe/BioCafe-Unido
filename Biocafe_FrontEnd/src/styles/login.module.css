@@ -1,16 +1,79 @@
 .loginBackground {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
   height: 100vh;
+  margin: 0;
+  padding: 0;
   background-image: url('../assets/images/cafe.jpg');
   background-size: cover;
   background-position: right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.logoContainer {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 10;
+}
+
+.animatedLogo {
+  width: 80px;
+  height: auto;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  animation: logoFloat 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.animatedLogo:hover {
+  transform: scale(1.05) rotate(3deg);
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .logoContainer {
+    top: 8px;
+    left: 15px;
+  }
+  
+  .animatedLogo {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoContainer {
+    top: 5px;
+    left: 10px;
+  }
+  
+  .animatedLogo {
+    width: 50px;
+  }
 }
 
 .loginContainer {
   width: 30%;
+  min-width: 350px;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -18,6 +81,7 @@
   background: rgba(255, 255, 255, 0.9);
   padding: 40px;
   box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .loginBox {

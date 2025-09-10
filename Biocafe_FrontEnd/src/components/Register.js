@@ -67,6 +67,9 @@ const Register = () => {
 
   return (
     <div className={styles.loginBackground}>
+      <div className={styles.logoContainer}>
+        <img src="/logo-biocafe.png" alt="BioCafé Logo" className={styles.animatedLogo} />
+      </div>
       <div className={styles.loginContainer}>
         <div className={styles.loginBox}>
           <h2>Registrarse</h2>

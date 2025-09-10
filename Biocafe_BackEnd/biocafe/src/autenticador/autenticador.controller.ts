@@ -1,6 +1,7 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post, Get, Headers } from '@nestjs/common';
 import { AutenticadorService } from './autenticador.service';
 import { AutenticadorDto } from './autenticador.dto';
+import * as jwt from 'jsonwebtoken';
 
 @Controller('autenticador')
 export class AutenticadorController {

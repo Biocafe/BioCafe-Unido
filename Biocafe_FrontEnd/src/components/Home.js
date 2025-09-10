@@ -140,7 +140,50 @@ const Home = () => {
 
       {/* Footer */}
       <footer className={styles.footer}>
-        <p>☕"Aquí te ayudamos a descubrir el mejor café. Porque cada grano cuenta." ☕</p>
+        <div className={styles.footerContent}>
+          <div className={styles.footerSection}>
+            <h3 className={styles.footerTitle}>🌱 BioCafe</h3>
+            <p className={styles.footerDescription}>
+              Plataforma especializada en el análisis y clasificación de café. 
+              Conectamos la ciencia con la tradición cafetera para obtener 
+              los mejores resultados en cada cosecha.
+            </p>
+          </div>
+          
+          <div className={styles.footerSection}>
+            <h4 className={styles.footerSubtitle}>🎯 Nuestra Misión</h4>
+            <div className={styles.footerList}>
+              <p>✨ Análisis científico del café</p>
+              <p>📊 Clasificación precisa de granos</p>
+              <p>🔬 Tecnología al servicio del café</p>
+              <p>🌿 Apoyo a los caficultores</p>
+            </div>
+          </div>
+          
+          <div className={styles.footerSection}>
+            <h4 className={styles.footerSubtitle}>☕ Servicios</h4>
+            <div className={styles.footerList}>
+              <p>📈 Cargue masivo de datos</p>
+              <p>🔍 Análisis individual</p>
+              <p>📋 Reportes detallados</p>
+              <p>📊 Estadísticas avanzadas</p>
+            </div>
+          </div>
+          
+          <div className={styles.footerSection}>
+            <h4 className={styles.footerSubtitle}>🏆 Calidad</h4>
+            <div className={styles.footerList}>
+              <p>🎯 Precisión en resultados</p>
+              <p>⚡ Procesamiento rápido</p>
+              <p>🔒 Datos seguros</p>
+              <p>💡 Innovación constante</p>
+            </div>
+          </div>
+        </div>
+        
+        <div className={styles.footerBottom}>
+          <p>© 2024 BioCafe - Plataforma de Análisis de Café. ☕ "Cada grano cuenta, cada análisis importa" ☕</p>
+        </div>
       </footer>
     </div>
   );

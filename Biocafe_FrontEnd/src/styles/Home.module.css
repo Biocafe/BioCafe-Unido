@@ -6,12 +6,13 @@
   flex-direction: column;
   align-items: center;
   background-color: #FAF7F0;
+  overflow-x: hidden;
 }
 
 /* Contenedor del carrusel */
 .carouselContainer {
   width: 90%;
-  max-width: 1500px;
+  max-width: 1200px;
   overflow: hidden;
   margin-top: 20px;
   border-radius: 10px;
@@ -66,8 +67,8 @@
 
 /* Sección "¿Qué es el café?" */
 .section {
-  width: 90%;
-  max-width: 1000px;
+  width: 85%;
+  max-width: 950px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -105,65 +106,154 @@
 
 /* Título llamativo para los procesos del café */
 .processTitle {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
-  color: white;
+  color: #6F4E37;
   text-align: center;
   margin-top: 40px;
-  padding: 10px;
-  background: #6F4E37;
-  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 0;
+  background: none;
+  border-radius: 0;
   width: 80%;
   max-width: 800px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  border-bottom: 3px solid #D4A574;
+  padding-bottom: 10px;
 }
 
 /* Contenedor de los procesos */
 .processContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px 40px;
-  width: 90%;
-  max-width: 1200px;
+  gap: 30px 25px;
+  width: 85%;
+  max-width: 1000px;
   margin-top: 40px;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 
 /* Tarjetas de procesos */
 .processCard {
-  background: #A67B5B;
-  color: white;
+  background: white;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(111, 78, 55, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 80% 20%, rgba(111, 78, 55, 0.08) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 40% 40%, rgba(166, 123, 91, 0.06) 1px, transparent 1px),
+    radial-gradient(circle at 90% 70%, rgba(111, 78, 55, 0.1) 2.5px, transparent 2.5px),
+    radial-gradient(circle at 10% 30%, rgba(166, 123, 91, 0.08) 1.8px, transparent 1.8px),
+    radial-gradient(circle at 70% 90%, rgba(111, 78, 55, 0.07) 1.2px, transparent 1.2px),
+    radial-gradient(circle at 30% 70%, rgba(166, 123, 91, 0.09) 1.6px, transparent 1.6px),
+    radial-gradient(circle at 60% 10%, rgba(111, 78, 55, 0.06) 1.4px, transparent 1.4px);
+  background-size: 50px 50px, 40px 40px, 30px 30px, 60px 60px, 35px 35px, 45px 45px, 38px 38px, 42px 42px;
+  color: #6F4E37;
   width: 100%;
-  padding: 25px;
-  border-radius: 12px;
+  min-height: 280px;
+  padding: 18px;
+  border-radius: 10px;
   text-align: center;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  max-width: 320px;
+  box-shadow: 0 6px 15px rgba(111, 78, 55, 0.12);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  max-width: 280px;
+  border: 2px solid rgba(236, 177, 118, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: 
+    coffeeBeansFloat 8s ease-in-out infinite,
+    coffeeBeansRotate 12s linear infinite,
+    coffeeBeansWave 6s ease-in-out infinite alternate;
+}
+
+@keyframes coffeeBeansFloat {
+  0% {
+    background-position: 0 0, 20px 20px, 10px 30px, 40px 10px, 15px 45px, 35px 5px, 25px 35px, 5px 15px;
+  }
+  12.5% {
+    background-position: 3px -2px, 23px 17px, 13px 33px, 37px 13px, 18px 42px, 32px 8px, 28px 32px, 2px 18px;
+  }
+  25% {
+    background-position: 5px 1px, 17px 25px, 7px 27px, 43px 7px, 12px 48px, 38px 2px, 22px 38px, 8px 12px;
+  }
+  37.5% {
+    background-position: 2px 4px, 22px 16px, 12px 34px, 38px 14px, 17px 41px, 33px 9px, 27px 31px, 3px 19px;
+  }
+  50% {
+    background-position: -1px 3px, 19px 23px, 9px 29px, 41px 9px, 14px 46px, 36px 4px, 24px 36px, 6px 14px;
+  }
+  62.5% {
+    background-position: 4px -1px, 16px 21px, 14px 32px, 36px 12px, 19px 43px, 31px 7px, 29px 33px, 1px 17px;
+  }
+  75% {
+    background-position: 1px 5px, 24px 18px, 6px 26px, 44px 6px, 11px 49px, 39px 1px, 21px 39px, 9px 11px;
+  }
+  87.5% {
+    background-position: -2px 2px, 21px 24px, 11px 35px, 39px 15px, 16px 40px, 34px 10px, 26px 30px, 4px 20px;
+  }
+  100% {
+    background-position: 0 0, 20px 20px, 10px 30px, 40px 10px, 15px 45px, 35px 5px, 25px 35px, 5px 15px;
+  }
+}
+
+@keyframes coffeeBeansRotate {
+  0% {
+    background-position: 0 0, 20px 20px, 10px 30px, 40px 10px, 15px 45px, 35px 5px, 25px 35px, 5px 15px;
+  }
+  25% {
+    background-position: 10px 5px, 30px 25px, 20px 35px, 50px 15px, 25px 50px, 45px 10px, 35px 40px, 15px 20px;
+  }
+  50% {
+    background-position: 5px 10px, 25px 30px, 15px 40px, 45px 20px, 20px 55px, 40px 15px, 30px 45px, 10px 25px;
+  }
+  75% {
+    background-position: -5px 5px, 15px 25px, 5px 35px, 35px 15px, 10px 50px, 30px 10px, 20px 40px, 0px 20px;
+  }
+  100% {
+    background-position: 0 0, 20px 20px, 10px 30px, 40px 10px, 15px 45px, 35px 5px, 25px 35px, 5px 15px;
+  }
+}
+
+@keyframes coffeeBeansWave {
+  0% {
+    background-size: 40px 40px, 60px 60px, 35px 35px, 50px 50px, 45px 45px, 55px 55px, 30px 30px, 65px 65px;
+  }
+  50% {
+    background-size: 42px 38px, 58px 62px, 37px 33px, 48px 52px, 47px 43px, 53px 57px, 32px 28px, 63px 67px;
+  }
+  100% {
+    background-size: 40px 40px, 60px 60px, 35px 35px, 50px 50px, 45px 45px, 55px 55px, 30px 30px, 65px 65px;
+  }
 }
 
 .processCard:hover {
   transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(111, 78, 55, 0.25);
 }
 
 .processCard img {
   width: 100%;
-  height: 140px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 10px;
 }
 
 .processCard h3 {
-  margin-top: 15px;
-  font-size: 20px;
-  color: white;
+  margin-top: 0px;
+  margin-bottom: 2%;
+  font-size: 18px;
+  color: #6F4E37;
+  font-weight: bold;
 }
 
 .processCard p {
-  font-size: 16px;
-  margin-top: 8px;
-  line-height: 1.4;
+  font-size: 14px;
+  margin-bottom: 50px;
+  margin-top: 0px;
+  line-height: 1.3;
+  color: #A67B5B;
 }
 
 /* Asegurar que los dos de la segunda fila estén centrados */
@@ -183,7 +273,8 @@
 @media (max-width: 1024px) {
   .processContainer {
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 25px 20px;
+    width: 90%;
   }
 }
 
@@ -191,13 +282,19 @@
 @media (max-width: 768px) {
   .processContainer {
     grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    width: 95%;
+  }
+  
+  .processCard {
+    max-width: 100%;
   }
 }
 
 /* Sección de homenaje a los caficultores */
 .caficultoresSection {
-  width: 90%;
-  max-width: 1200px;
+  width: 85%;
+  max-width: 950px;
   margin: 60px auto;
   text-align: center;
   padding: 30px;
@@ -207,12 +304,20 @@
 }
 
 .messageTitle {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
-  padding: 10px 20px;
-  background: #6F4E37;
-  margin-bottom: 15px;
-  border-radius: 12px;
+  color: #6F4E37;
+  text-align: center;
+  margin: 40px auto 20px;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: none;
+  border-bottom: 3px solid #D4A574;
+  padding-bottom: 10px;
+  display: block;
 }
 
 .messageText {
@@ -220,14 +325,14 @@
   color: #A67B5B;
   margin-bottom: 30px;
   line-height: 1.6;
-  max-width: 900px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 /* Carrusel de caficultores */
 .caficultoresCarousel {
-  width: 90%;
-  max-width: 1200px;
+  width: 85%;
+  max-width: 750px;
   margin: 60px auto;
   text-align: center;
 }
@@ -235,7 +340,7 @@
 .messageTitle {
   font-size: 26px;
   font-weight: bold;
-  color: white;
+  color: #6F4E37;
   margin-bottom: 20px;
 }
 
@@ -249,18 +354,266 @@
 
 /* Footer */
 .footer {
-  background: #6F4E37;
+  background: linear-gradient(135deg, #6F4E37 0%, #8B4513 50%, #5D4037 100%);
   color: white;
-  text-align: center;
-  padding: 20px;
   margin-top: 50px;
-  font-size: 14px;
-  font-weight: normal;
-  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes elegantShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.3) 25%, #D4AF37 50%, #FFD700 60%, #D4AF37 75%, rgba(212, 175, 55, 0.3) 90%, transparent 100%);
+  background-size: 400% 100%;
+  animation: elegantShimmer 8s ease-in-out infinite;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.footerSection:nth-child(1) {
+  animation: slideInFromBottom 1s ease-out 0.2s forwards;
+}
+
+.footerSection:nth-child(2) {
+  animation: fadeInScale 1s ease-out 0.4s forwards;
+}
+
+.footerSection:nth-child(3) {
+  animation: slideInFromBottom 1s ease-out 0.6s forwards;
+}
+
+.footerSection:nth-child(4) {
+  animation: fadeInScale 1s ease-out 0.8s forwards;
+}
+
+.footerSection:hover {
+  transform: translateY(-5px) scale(1.02);
+  filter: brightness(1.1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(60px) rotateX(15deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes titleGlow {
+  0%, 100% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 215, 0, 0.3); }
+  50% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.5); }
+}
+
+.footerTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #FFD700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: titleGlow 3s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.footerTitle:hover {
+  transform: scale(1.05);
+}
+
+.footerSubtitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #F5DEB3;
+  border-bottom: 2px solid #D4AF37;
+  padding-bottom: 8px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.footerSubtitle::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #FFD700, #D4AF37);
+  transition: width 0.3s ease;
+}
+
+.footerSubtitle:hover::after {
   width: 100%;
 }
 
-.footer p {
-  color: white;
+.footerDescription {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #E8E8E8;
   margin: 0;
+  transition: all 0.3s ease;
+}
+
+/* Removed hover effect for footerDescription */
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.footerList {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+ }
+ 
+ .footerList p {
+   margin: 0;
+   font-size: 14px;
+   color: #E8E8E8;
+   transition: all 0.3s ease;
+   padding: 5px 0;
+   cursor: default;
+   opacity: 0;
+   animation: slideInLeft 0.6s ease-out forwards;
+   position: relative;
+ }
+
+ .footerList p:nth-child(1) { animation-delay: 0.1s; }
+ .footerList p:nth-child(2) { animation-delay: 0.2s; }
+ .footerList p:nth-child(3) { animation-delay: 0.3s; }
+ .footerList p:nth-child(4) { animation-delay: 0.4s; }
+ 
+ /* Removed hover effect for footerList p */
+
+.footerBottom {
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.footerBottom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+.footerBottom p {
+  margin: 0;
+  font-size: 14px;
+  color: #D3D3D3;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.8s forwards;
+  transition: all 0.3s ease;
+}
+
+/* Removed hover effect for footerBottom p */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 30px 15px;
+  }
+  
+  .footerTitle {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .footerSubtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .socialLinks {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
